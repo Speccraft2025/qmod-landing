@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-MOD — Hardware-Grade Virtual MIDI Controller & Synth Expression Engine</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Q-MOD — Hardware-Grade Virtual MIDI Controller & Synth Expression Engine">
+    <meta name="description" content="The greatest MIDI evolution since the invention of MIDI technology. Turn your keyboard and trackpad into a polyphonic synth expression engine and strict Mackie Control Universal (MCU) surface for Logic Pro and other DAWs.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Premium Ambient Background Glows -->
+    <div class="glow-container">
+        <div class="glow-orb glow-cyan"></div>
+        <div class="glow-orb glow-emerald"></div>
+        <div class="glow-orb glow-violet"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo-id">
+                <span class="logo-dot"></span>
+                <span class="logo-text">Q-MOD</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#simulator" class="nav-link">Live Simulator</a>
+                <a href="#mmbc" class="nav-link">MMBC Core</a>
+                <a href="#manifesto" class="nav-link">Manifesto</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#simulator" class="btn btn-nav">
+                    <i class="fa-solid fa-play"></i> Try Simulator
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text"><i class="fa-solid fa-wand-magic-sparkles"></i> A REVOLUTION IN MIDI EXPRESSION</span>
+                </div>
+                <h1 class="hero-title">
+                    The Greatest MIDI Evolution <br>
+                    <span class="gradient-text">Since 1983.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Turn your laptop keyboard and trackpad into a high-fidelity, hardware-grade polyphonic synthesizer and strict Mackie Control Universal (MCU) surface. Completely isolated. 100% leak-proof. Zero DAW-side configuration needed.
+                </p>
+                <div class="hero-cta">
+                    <a href="#simulator" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-wave-square"></i> Play the Live Simulator
+                    </a>
+                    <a href="#mmbc" class="btn btn-secondary btn-lg">
+                        <i class="fa-solid fa-shield-halved"></i> Explore MMBC Core
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Glowing Floating Q-MOD HUD Mockup -->
+                <div class="hud-mockup">
+                    <div class="hud-header">
+                        <div class="hud-status">
+                            <span class="hud-dot"></span>
+                            <span class="hud-status-text">Q-MOD READY</span>
+                        </div>
+                        <div class="hud-controls">
+                            <span class="control-dot"></span>
+                            <span class="control-dot"></span>
+                            <span class="control-dot"></span>
+                        </div>
+                    </div>
+                    <div class="hud-body">
+                        <div class="hud-row">
+                            <span class="hud-label">ACTIVE MODE</span>
+                            <span class="hud-value mode-badge-keys">KEYS (PERFORMANCE)</span>
+                        </div>
+                        <div class="hud-divider"></div>
+                        <div class="hud-param">
+                            <div class="param-header">
+                                <span>VEL (VELOCITY)</span>
+                                <span>0.75</span>
+                            </div>
+                            <div class="param-bar-bg"><div class="param-bar cyan-bar" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="hud-param">
+                            <div class="param-header">
+                                <span>MOD (MODULATION)</span>
+                                <span>0.42</span>
+                            </div>
+                            <div class="param-bar-bg"><div class="param-bar purple-bar" style="width: 42%;"></div></div>
+                        </div>
+                        <div class="hud-param">
+                            <div class="param-header">
+                                <span>EXP (EXPRESSION)</span>
+                                <span>0.60</span>
+                            </div>
+                            <div class="param-bar-bg"><div class="param-bar orange-bar" style="width: 60%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Live Simulator Section -->
+    <section id="simulator" class="simulator-section">
+        <div class="section-header">
+            <h2 class="section-title">Experience Q-MOD In Your Browser</h2>
+            <p class="section-subtitle">Press your laptop keys, balance the mixer, and watch the central MIDI Bridge Core split your intent deterministically at the byte level with zero crossover.</p>
+        </div>
+
+        <div class="simulator-container">
+            <!-- Left Panel: Interactive Keyboard & Controller UI -->
+            <div class="sim-left">
+                <!-- Mode Switcher -->
+                <div class="sim-mode-toggle">
+                    <button class="mode-btn active" id="btn-mode-keys">
+                        <i class="fa-solid fa-keyboard"></i> KEYS MODE
+                    </button>
+                    <button class="mode-btn" id="btn-mode-mixer">
+                        <i class="fa-solid fa-sliders"></i> MIXER (MCU) MODE
+                    </button>
+                </div>
+
+                <!-- Simulation Work Area -->
+                <div class="sim-work-area">
+                    <!-- Keys Mode Synth Interface -->
+                    <div class="synth-interface" id="panel-keys-mode">
+                        <div class="synth-keyboard-hint">
+                            <p><i class="fa-solid fa-circle-info"></i> Use your physical keyboard keys: <strong>A, S, D, F, G, H, J, K</strong> (white keys) and <strong>W, E, T, Y, U</strong> (black keys) to play the polyphonic Web Audio synth!</p>
+                        </div>
+                        <!-- Virtual Piano Keys -->
+                        <div class="piano-keyboard">
+                            <div class="piano-key white" data-note="60" data-key="a"><span>A</span></div>
+                            <div class="piano-key black" data-note="61" data-key="w"><span>W</span></div>
+                            <div class="piano-key white" data-note="62" data-key="s"><span>S</span></div>
+                            <div class="piano-key black" data-note="63" data-key="e"><span>E</span></div>
+                            <div class="piano-key white" data-note="64" data-key="d"><span>D</span></div>
+                            <div class="piano-key white" data-note="65" data-key="f"><span>F</span></div>
+                            <div class="piano-key black" data-note="66" data-key="t"><span>T</span></div>
+                            <div class="piano-key white" data-note="67" data-key="g"><span>G</span></div>
+                            <div class="piano-key black" data-note="68" data-key="y"><span>Y</span></div>
+                            <div class="piano-key white" data-note="69" data-key="h"><span>H</span></div>
+                            <div class="piano-key black" data-note="70" data-key="u"><span>U</span></div>
+                            <div class="piano-key white" data-note="71" data-key="j"><span>J</span></div>
+                            <div class="piano-key white" data-note="72" data-key="k"><span>K</span></div>
+                        </div>
+                        
+                        <!-- Synthesizer Visualizers -->
+                        <div class="synth-visualizers">
+                            <div class="synth-control-pad" id="trackpad-emulator">
+                                <span class="pad-label">Trackpad Emulator (Drag to modulate)</span>
+                                <div class="pad-cursor" id="trackpad-cursor"></div>
+                            </div>
+                            <div class="visualizer-waves">
+                                <canvas id="canvas-oscilloscope"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mixer Mode MCU Interface -->
+                    <div class="mixer-interface hidden" id="panel-mixer-mode">
+                        <div class="synth-keyboard-hint">
+                            <p><i class="fa-solid fa-circle-info"></i> Press numbers <strong>1–8</strong> to select tracks. Use your <strong>Arrow keys (↑ / ↓)</strong> to adjust volumes and <strong>(← / →)</strong> to adjust pan.</p>
+                        </div>
+                        <!-- Virtual Mixer Tracks -->
+                        <div class="mixer-tracks">
+                            <!-- Tracks dynamically rendered in JS or hardcoded for high fidelity -->
+                            <div class="mixer-track active" data-track="1">
+                                <div class="track-header">CH 1</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 78%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">78%</span>
+                                    <span class="track-indicator">SEL</span>
+                                </div>
+                            </div>
+                            <div class="mixer-track" data-track="2">
+                                <div class="track-header">CH 2</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 60%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">60%</span>
+                                    <span class="track-indicator"></span>
+                                </div>
+                            </div>
+                            <div class="mixer-track" data-track="3">
+                                <div class="track-header">CH 3</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 45%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">45%</span>
+                                    <span class="track-indicator"></span>
+                                </div>
+                            </div>
+                            <div class="mixer-track" data-track="4">
+                                <div class="track-header">CH 4</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 70%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">70%</span>
+                                    <span class="track-indicator"></span>
+                                </div>
+                            </div>
+                            <div class="mixer-track" data-track="5">
+                                <div class="track-header">CH 5</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 80%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">80%</span>
+                                    <span class="track-indicator"></span>
+                                </div>
+                            </div>
+                            <div class="mixer-track" data-track="6">
+                                <div class="track-header">CH 6</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 50%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">50%</span>
+                                    <span class="track-indicator"></span>
+                                </div>
+                            </div>
+                            <div class="mixer-track" data-track="7">
+                                <div class="track-header">CH 7</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 65%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">65%</span>
+                                    <span class="track-indicator"></span>
+                                </div>
+                            </div>
+                            <div class="mixer-track" data-track="8">
+                                <div class="track-header">CH 8</div>
+                                <div class="pan-knob-container">
+                                    <div class="pan-knob" style="transform: rotate(0deg);"></div>
+                                    <div class="pan-label">C</div>
+                                </div>
+                                <div class="fader-track">
+                                    <div class="fader-handle" style="bottom: 30%;"></div>
+                                </div>
+                                <div class="track-footer">
+                                    <span class="track-val">30%</span>
+                                    <span class="track-indicator"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: MMBC Real-Time Forensic Inspector -->
+            <div class="sim-right">
+                <div class="inspector-header">
+                    <div class="inspector-title">
+                        <i class="fa-solid fa-microchip"></i> MMBC GATE INSPECTOR
+                    </div>
+                    <div class="inspector-port-status">
+                        <span class="port-status-pill green">✔ PORT A ACTIVE</span>
+                        <span class="port-status-pill green">✔ PORT B ACTIVE</span>
+                    </div>
+                </div>
+                <!-- Interactive Real-time Forensic Log Console -->
+                <div class="console-box" id="console-logs">
+                    <!-- Logs dynamically appended in JS -->
+                    <div class="log-entry system"><span class="log-ts">[14:36:00.000]</span> [SYSTEM] Q-MOD Virtual MIDI Client created successfully.</div>
+                    <div class="log-entry system"><span class="log-ts">[14:36:00.050]</span> [SYSTEM] MMBC Routing state initialized to: PERFORMANCE</div>
+                    <div class="log-entry system"><span class="log-ts">[14:36:00.082]</span> [SYSTEM] Destination PORT C (Q-MOD Internal Router) online.</div>
+                    <div class="log-entry system"><span class="log-ts">[14:36:00.120]</span> [SYSTEM] Waiting for MIDI interaction...</div>
+                </div>
+                <!-- Real-time Health Monitor grid mimicking the Q-MOD DAW Onboarding View -->
+                <div class="sim-health-grid">
+                    <div class="health-card">
+                        <span class="health-label">ROUTING STATE</span>
+                        <span class="health-val text-cyan" id="health-routing-state">PERFORMANCE</span>
+                    </div>
+                    <div class="health-card">
+                        <span class="health-label">PORT ISOLATION</span>
+                        <span class="health-val text-green" id="health-port-isolation">100% SECURE</span>
+                    </div>
+                    <div class="health-card">
+                        <span class="health-label">ACTIVE OUTPORT</span>
+                        <span class="health-val text-cyan" id="health-active-port">PORT A (PERFORMANCE)</span>
+                    </div>
+                    <div class="health-card">
+                        <span class="health-label">FORENSIC MONITOR</span>
+                        <span class="health-val text-green">GUARD RUNNING</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Core (MMBC) Section -->
+    <section id="mmbc" class="architecture-section">
+        <div class="section-header">
+            <h2 class="section-title">The Q-MOD MIDI Bridge Core (MMBC)</h2>
+            <p class="section-subtitle">How Q-MOD eliminates configuration errors by solving DAW limitations directly at the system-level.</p>
+        </div>
+
+        <div class="arch-grid">
+            <div class="arch-card">
+                <div class="arch-card-icon"><i class="fa-solid fa-code-fork"></i></div>
+                <h3 class="arch-card-title">Three-Port Virtual Separation</h3>
+                <p class="arch-card-text">
+                    Instead of sharing ports, MMBC registers three distinct endpoints. <strong>Port A</strong> emits pure MIDI notes only, <strong>Port B</strong> maps strictly to Mackie MCU control parameters, and <strong>Port C</strong> acts as the unified Internal Router.
+                </p>
+            </div>
+            <div class="arch-card">
+                <div class="arch-card-icon"><i class="fa-solid fa-traffic-light"></i></div>
+                <h3 class="arch-card-title">Hard-Gating State Machine</h3>
+                <p class="arch-card-text">
+                    A physical gate that monitors Q-MOD's mode. In Keys mode, any Mixer note is mathematically destroyed at the packet layer. In Mixer mode, musical leakage is strictly blocked. Crossover is physically impossible.
+                </p>
+            </div>
+            <div class="arch-card">
+                <div class="arch-card-icon"><i class="fa-solid fa-user-shield"></i></div>
+                <h3 class="arch-card-title">Real-Time Forensic Monitor</h3>
+                <p class="arch-card-text">
+                    A passive, zero-overhead byte validator that inspects every outgoing MIDI packet before transmitting it to CoreMIDI, instantly flagging any routing violations or domain leakage.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Q-MOD Manifesto -->
+    <section id="manifesto" class="manifesto-section">
+        <div class="manifesto-container">
+            <div class="manifesto-icon"><i class="fa-solid fa-gem"></i></div>
+            <h2 class="manifesto-title">The Manifesto</h2>
+            <h3 class="manifesto-subtitle">Reimagining the Laptop as a Living Instrument</h3>
+            <p class="manifesto-paragraph">
+                In 1983, the world agreed on a protocol that would democratize music technology forever. But for the next four decades, standard laptop musicians were relegated to clicking notes with a mouse or carrying bulky external plastic keyboards just to sketch out a chord or balance a fader.
+            </p>
+            <p class="manifesto-paragraph">
+                Q-MOD is built on a simple, radical philosophy: <strong>the computer you already own is a premium, high-fidelity physical instrument.</strong> 
+            </p>
+            <p class="manifesto-paragraph">
+                By leveraging low-level macOS session taps, custom CoreMIDI virtual endpoint injection, and advanced HSL-tailored expression algorithms, Q-MOD translates your tactile relationship with your laptop keyboard and trackpad into seamless, high-definition musical intent. No clutter. No adapters. Just pure, immediate control surface emulations.
+            </p>
+            <div class="manifesto-sign">
+                <span class="sign-brand">Q-MOD Swarm Systems</span>
+                <span class="sign-tagline">June 2026</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">&copy; 2026 Q-MOD Project. Open Source under the MIT License.</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank" class="footer-link"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
