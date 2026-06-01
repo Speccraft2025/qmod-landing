@@ -523,4 +523,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     animateWave();
+
+    // 11. Wishlist Form Handling
+    const wishlistForm = document.getElementById('wishlist-form');
+    const wishlistSuccess = document.getElementById('wishlist-success');
+    
+    if (wishlistForm) {
+        wishlistForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('wishlist-name').value;
+            const email = document.getElementById('wishlist-email').value;
+            const socialType = document.getElementById('wishlist-social-type').value;
+            const socialHandle = document.getElementById('wishlist-handle').value;
+            
+            // Format logging in console to look extremely professional
+            appendLog('leak', `[WISHLIST] New Registration: ${name} (${email}) | ${socialType}: ${socialHandle}`);
+            
+            // Generate simulated Netlify post submission
+            const formData = new FormData(wishlistForm);
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                appendLog('system', `[SYSTEM] Netlify Form Submission processed successfully.`);
+            })
+            .catch((error) => {
+                console.error("Netlify form submission error:", error);
+            });
+            
+            // Smoothly animate transition to success state
+            wishlistForm.style.transition = 'opacity 0.3s ease';
+            wishlistForm.style.opacity = '0';
+            setTimeout(() => {
+                wishlistForm.classList.add('hidden');
+                wishlistSuccess.classList.remove('hidden');
+                appendLog('system', `✔ WISHLIST SUCCESS: ${name} added to early access queues.`);
+            }, 300);
+        });
+    }
 });

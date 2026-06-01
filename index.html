@@ -35,6 +35,7 @@
             <nav class="nav-links">
                 <a href="#simulator" class="nav-link">Live Simulator</a>
                 <a href="#mmbc" class="nav-link">MMBC Core</a>
+                <a href="#wishlist" class="nav-link">Wishlist</a>
                 <a href="#manifesto" class="nav-link">Manifesto</a>
             </nav>
             <div class="nav-actions">
@@ -367,6 +368,69 @@
                 <p class="arch-card-text">
                     A passive, zero-overhead byte validator that inspects every outgoing MIDI packet before transmitting it to CoreMIDI, instantly flagging any routing violations or domain leakage.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access Wishlist Section -->
+    <section id="wishlist" class="wishlist-section">
+        <div class="wishlist-container">
+            <div class="wishlist-badge">
+                <span class="badge-text"><i class="fa-solid fa-rocket"></i> JOIN THE SWARM</span>
+            </div>
+            <h2 class="section-title">Apply for Early Access</h2>
+            <p class="section-subtitle">Be the first to turn your computer into a hardware-grade instrument. Limited initial invitations.</p>
+            
+            <form name="qmod-wishlist" method="POST" data-netlify="true" class="wishlist-form" id="wishlist-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="wishlist-name">Your Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="wishlist-name" name="name" placeholder="John Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="wishlist-email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="wishlist-email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="wishlist-social-type">Social Platform</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <select id="wishlist-social-type" name="social-platform">
+                                <option value="instagram">Instagram</option>
+                                <option value="tiktok">TikTok</option>
+                                <option value="youtube">YouTube</option>
+                                <option value="other">Other / Portfolio</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="wishlist-handle">Social Handle / Link</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-at"></i>
+                            <input type="text" id="wishlist-handle" name="social-handle" placeholder="@username" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn-submit-wishlist">
+                    <i class="fa-solid fa-paper-plane"></i> Join Early Access Wishlist
+                </button>
+            </form>
+            
+            <!-- Glassmorphic Success State (Hidden by default) -->
+            <div class="wishlist-success hidden" id="wishlist-success">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3 class="success-title">Welcome to the Swarm</h3>
+                <p class="success-text">Your early access request has been registered. We've locked your position in the wishlist queues. Keep an eye on your inbox for your invitation.</p>
             </div>
         </div>
     </section>
